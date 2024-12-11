@@ -28,24 +28,29 @@
   
 <header>
   
-        <div class="carousel">
-            <div class="carousel-slide active" style="background-image: url('img/home1.webp');">
-                <div class="overlay"></div>
-            </div>
-                        <div class="carousel-slide active" style="background-image: url('img/home1.webp');">
-                <div class="overlay"></div>
-            </div>
-            <div class="carousel-slide" style="background-image: url('img/home2.webp');">
-                <div class="overlay"></div>
-            </div>
-        </div>
+    <div class="carousel">
+    <div class="carousel-slide active" style="background-image: url('img/ho.png');">
+        <div class="overlay"></div>
+    </div>
+    <div class="carousel-slide" style="background-image: url('img/home1.webp');">
+        <div class="overlay"></div>
+    </div>
+    <div class="carousel-slide" style="background-image: url('img/home2.webp');">
+        <div class="overlay"></div>
+    </div>
+
+    <!-- Carousel navigation buttons -->
+
+</div>
+
+    
         <div class="header-content">
             <nav>
                 <img src="img/itlogo-removebg-preview.png" alt="ITST Logo" class="logo">
                 <span class="menu-toggle" id="menu-toggle">&#9776;</span> <!-- Menu toggle for mobile -->
                 <ul id="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#software">Software für Anwälte</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="software.html">Software für Anwälte</a></li>
                     <li><a href="#it-infrastructure">IT-Infrastruktur</a></li>
                     <li><a href="#cloud-solution">Cloud Lösung</a></li>
                     <li><a href="#contact">Kontakt</a></li>
@@ -61,58 +66,358 @@
         </div>
     </header>
     
+        
+    <style>
+      /* General Section Styling */
+#services {
+    padding: 50px;
+    background-color: #d0e2eb; /* Match the background color */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service {
+    margin-bottom: 50px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.service-feature {
+    background-color: #f0f8ff;
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%; /* Default width for larger screens */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.service-feature:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    background-color: #eaf4ff; /* Slightly darker blue on hover */
+}
+
+.service-feature img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+.vertical-line {
+    width: 2px;
+    background-color: #ccc;
+    height: auto;
+    align-self: stretch;
+}
+
+/* Mobile CSS */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-feature {
+        width: 100%; /* Expand to full width on mobile */
+        max-width: 95%; /* Add some padding to avoid edges */
+        margin-bottom: 20px; /* Add spacing between items */
+    }
+
+    .vertical-line {
+        display: none; /* Hide vertical lines on mobile */
+    }
+
+    #services {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 24px; /* Adjust heading size for smaller screens */
+    }
+
+    .cta-button {
+        padding: 8px 16px; /* Slightly smaller buttons for mobile */
+        font-size: 16px;
+    }
+}
+
+    </style>
+    
     <section id="services" class="section">
         <h2 style="color: #0b4689;">Unsere Dienstleistungen</h2>
-        <div class="services-container">
-            <!-- Service 1: WinJur Software -->
-            <div class="service-box">
-                <img src="img/winzur.webp" alt="WinJur Software">
-                <h4>WinJur</h4>
-                <p style="font-size: 20px;">Vereinfachen Sie Ihre Kanzleiverwaltung mit leistungsstarker Software. WinJur hilft Ihnen dabei, alle Prozesse effizient zu steuern und die Arbeitsabläufe in Ihrer Kanzlei zu optimieren.</p>
-                <a href="#" class="cta-button">Mehr erfahren</a>
-            </div>
-            
-            <!-- Service 2: Lexolution Documents -->
-            <div class="service-box">
-                <img src="img/lexo.webp" alt="Lexolution Documents">
-                <h4>Lexolution Documents</h4>
-                <p style="font-size: 20px;">Effizientes Vertragsmanagement mit innovativen Tools. Lexolution Documents erleichtert die Verwaltung und Automatisierung Ihrer juristischen Dokumente.</p>
-                <a href="#" class="cta-button">Mehr erfahren</a>
-            </div>
     
-            <!-- Service 3: Hardware Portfolio -->
-            <div class="service-box">
-                <img src="img/hardware.webp" alt="Server Solutions">
-                <h4>Hardware Portfolio</h4>
-                <p style="font-size: 20px;">Leistungsstarke Server- und Arbeitsplatzlösungen. Wir bieten Ihnen maßgeschneiderte Hardwarelösungen, die Ihre IT-Infrastruktur optimal unterstützen.</p>
-                <a href="#" class="cta-button">Mehr erfahren</a>
-            </div>
+        <!-- First Service Section -->
+        <div class="service" id="Software für Anwälte">
+            <h3 style="color: black; margin-bottom: 30px;" >Software für Anwälte</h3>
+            <div class="content">
+                <div class="service-feature">
+                    <img src="img/winzur.webp" alt="WinJur Software">
+                    <h4>WinJur</h4>
+                    <p style="font-size: 20px;">Vereinfachen Sie Ihre Kanzleiverwaltung mit leistungsstarker Software. WinJur hilft Ihnen dabei, alle Prozesse effizient zu steuern und die Arbeitsabläufe in Ihrer Kanzlei zu optimieren.</p>
+                    <a href="#" class="cta-button">Mehr erfahren</a>
+                </div>
     
-            <!-- Service 4: Cloud Infrastruktur -->
-            <div class="service-box">
-                <img src="img/cloud.webp" alt="Cloud Solutions">
-                <h4>Cloud Infrastruktur</h4>
-                <p style="font-size: 20px;">Sichere und skalierbare Cloud-Lösungen für Ihre Kanzlei. Nutzen Sie flexible Cloud-Technologien, die sich optimal in Ihre IT-Umgebung integrieren.</p>
-                <a href="#" class="cta-button">Mehr erfahren</a>
-            </div>
+                <!-- Vertical Line -->
+                <div class="vertical-line"></div>
     
-            <!-- Service 5: E-Mail Verschlüsselung -->
-            <div class="service-box">
-                <img src="img/email.webp" alt="Email Encryption">
-                <h4>E-Mail Verschlüsselung</h4>
-                <p style="font-size: 20px;">Maximale Sicherheit für Ihre digitale Kommunikation. Unsere Lösungen für die E-Mail-Verschlüsselung garantieren höchste Sicherheitsstandards für Ihre Korrespondenz.</p>
-                <a href="#" class="cta-button">Mehr erfahren</a>
+                <div class="service-feature" id="Lexolution Documents">
+                    <img src="img/lexo.webp" alt="Lexolution Documents">
+                    <h4>Lexolution Documents</h4>
+                    <p style="font-size: 20px;">Effizientes Vertragsmanagement mit innovativen Tools. Lexolution Documents erleichtert die Verwaltung und Automatisierung Ihrer juristischen Dokumente.</p>
+                    <a href="#" class="cta-button">Mehr erfahren</a>
+                </div>
             </div>
-            
-            <!-- Service 6: IT-Infrastruktur Gesamt -->
-            <div class="service-box">
-                <h4>IT-Infrastruktur</h4>
-                <p style="font-size: 20px;">Optimieren Sie Ihre IT-Infrastruktur mit unserer maßgeschneiderten Lösung, die sowohl Hardware als auch Cloud-Technologien umfasst.</p>
-                <a href="#" class="cta-button">Mehr erfahren</a>
+        </div>
+    
+        <!-- Second Service Section -->
+        <div class="service">
+            <h3 style="color: black; margin-bottom: 30px;">IT-Infrastruktur</h3>
+            <div class="content">
+                <div class="service-feature">
+                    <img src="img/hardware.webp" alt="Server Solutions">
+                    <h4>Hardware Portfolio</h4>
+                    <p style="font-size: 20px;">Leistungsstarke Server- und Arbeitsplatzlösungen. Wir bieten Ihnen maßgeschneiderte Hardwarelösungen, die Ihre IT-Infrastruktur optimal unterstützen.</p>
+                    <a href="#" class="cta-button">Mehr erfahren</a>
+                </div>
+    
+                <!-- Vertical Line -->
+                <div class="vertical-line"></div>
+    
+                <div class="service-feature">
+                    <img src="img/cloud.webp" alt="Cloud Solutions">
+                    <h4>Cloud Infrastruktur</h4>
+                    <p style="font-size: 20px;">Sichere und skalierbare Cloud-Lösungen für Ihre Kanzlei. Nutzen Sie flexible Cloud-Technologien, die sich optimal in Ihre IT-Umgebung integrieren.</p>
+                    <a href="#" class="cta-button">Mehr erfahren</a>
+                </div>
+    
+                <!-- Vertical Line -->
+                <div class="vertical-line"></div>
+    
+                <div class="service-feature">
+                    <img src="img/email.webp" alt="Email Encryption">
+                    <h4>E-Mail Verschlüsselung</h4>
+                    <p style="font-size: 20px;">Maximale Sicherheit für Ihre digitale Kommunikation. Unsere Lösungen für die E-Mail-Verschlüsselung garantieren höchste Sicherheitsstandards für Ihre Korrespondenz.</p>
+                    <a href="#" class="cta-button">Mehr erfahren</a>
+                </div>
             </div>
         </div>
     </section>
+          
+    <style>
+        .outer-box {
+            background-color: #d0e2eb;
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
     
+        .outer-box:hover {
+            transform: scale(1.05); /* Slight zoom effect */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add a shadow */
+        }
+    
+        .service {
+            background-color: #f0f8ff;
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+    
+        .service:hover {
+            background-color: #eaf4ff; /* Slightly darker blue on hover */
+        }
+    
+        .cta-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+    
+        .cta-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: translateY(-3px); /* Slight lift effect */
+        }
+    </style>
+    
+    <div class="outer-box">
+        <div class="service">
+            <h3 style="color: black; margin-bottom: 30px;">Cloud Lösung mit WinJur Managed Service</h3>
+
+            <!-- Blue Line Below the Heading -->
+            <hr style="border: 0; border-top: 5px solid #0056b3; width: 12%; margin: 0 auto 10px; margin-bottom: 30px;">
+            
+            <div class="service-content">
+                <img src="img/cloudwinz.webp" alt="Cloud Solutions" class="large-image">
+                <p style="font-size: 20px;">
+                    Mit unserer Cloud Lösung bieten wir Ihnen die perfekte Integration von WinJur in einer sicheren und skalierbaren Cloud-Umgebung. 
+                    Sie profitieren von:<br>
+                    - Echtzeit-Zugriff auf alle wichtigen Dokumente und Daten.<br>
+                    - Automatisierten Updates und Wartung.<br>
+                    - Höchster Verfügbarkeit und Stabilität.<br>
+                    Arbeiten Sie ortsunabhängig und fokussieren Sie sich auf das Wesentliche – Ihre Mandanten.
+                </p>
+                <a href="#" class="cta-button">Mehr erfahren</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="service-benefits">
+        <h4>Warum unsere Lösung wählen?</h4>
+        <div class="benefit-content">
+            <img src="img/why.webp" alt="Why Choose Us Image" class="benefits-image">
+            <ul>
+                <li>Flexibler Zugriff auf alle Daten von überall</li>
+                <li>Höchste Datensicherheitsstandards</li>
+                <li>Perfekt integriert mit WinJur</li>
+                <li>Einfaches Onboarding und Benutzerverwaltung</li>
+                <li>Kostenreduktion durch optimierte Ressourcen</li>
+            </ul>
+        </div>
+    </div>
+    
+    <style>
+        /* Service Benefits Styling */
+.service-benefits {
+    background-color: #b3e0ff; /* Lighter Sky Blue */
+    border: 2px solid #e0e8f0;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100%); /* Position off-screen to the right */
+    animation: slideInFromRight 1s forwards; /* Animation for the slide-in effect */
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* Move to normal position */
+        opacity: 1;
+    }
+}
+
+.service-benefits:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    background-color: #99c2ff; /* Slightly darker light blue on hover */
+}
+
+.service-benefits:active {
+    background-color: #b3d1ff; /* Even lighter blue on mouse click */
+}
+
+.service-benefits h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0b4689;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.benefit-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures responsive behavior */
+    gap: 20px; /* Add space between items */
+}
+
+.benefits-image {
+    width: 50%;
+    max-width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for the image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefits-image:hover {
+    transform: scale(1.1); /* Image zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+ul {
+    flex: 1;
+    text-align: left;
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    list-style-position: inside; /* Inline bullets */
+}
+
+ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px; /* Space for the custom icon */
+}
+
+ul li::before {
+    content: "✔"; /* Custom checkmark icon */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #2771c5;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+@media (max-width: 768px) {
+    .benefit-content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+    }
+
+    .benefits-image {
+        width: 80%; /* Adjust image size for mobile */
+    }
+
+    ul {
+        font-size: 16px; /* Slightly smaller font for mobile */
+    }
+}
+
+
+    </style>
+    
+            
         
     
             <section id="values" class="section" style="margin-top: 30px;">
@@ -135,6 +440,120 @@
                     </div>
                 </div>
             </section>
+            <style>
+/* Slide-in effect for the values section */
+#values {
+    opacity: 0;
+    transform: translateY(-50px); /* Start off-screen (above the section) */
+    animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for each value card */
+.values {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.value {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; /* Initially invisible */
+    transform: translateY(30px); /* Start from below */
+    animation: slideCard 0.8s ease-out forwards; /* Add animation */
+}
+
+.value:nth-child(1) {
+    animation-delay: 0.2s; /* Delay for first value card */
+}
+
+.value:nth-child(2) {
+    animation-delay: 0.4s; /* Delay for second value card */
+}
+
+.value:nth-child(3) {
+    animation-delay: 0.6s; /* Delay for third value card */
+}
+
+@keyframes slideCard {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effects for each value card */
+.value:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.value i {
+    font-size: 40px;
+    color: #0b4689;
+    margin-bottom: 15px;
+}
+
+.value h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.value p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .values {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .value {
+        width: 80%;  /* Adjust width for mobile screens */
+        margin-bottom: 20px;
+    }
+}
+
+  </style>
+  <script>
+    window.addEventListener("scroll", function() {
+        const valuesSection = document.getElementById("values");
+        const sectionPosition = valuesSection.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.5;
+        
+        if (sectionPosition < screenPosition) {
+            valuesSection.style.opacity = "1";
+            valuesSection.style.transition = "opacity 1s ease";
+        }
+    });
+</script>
+
+            
             
             <section id="testimonials" class="section">
                 <h2 style=" color:#0b4689; margin-bottom: 30px;">Kundenreferenzen</h2>
@@ -163,16 +582,18 @@
                     <div class="swiper-button-prev"></div>
                 </div>
             </section>
+
+
             
             <section id="contact" class="section contact-section">
-                <h2>Kontaktieren Sie uns</h2>
+                <h2 class="animate-from-right" style="color:#0b4689;">Kontaktieren Sie uns</h2>
             
                 <!-- Intro Text for Support -->
-                <p>Wie können wir Sie unterstützen?</p>
+                <p class="animate-from-right">Wie können wir Sie unterstützen?</p>
             
                 <!-- Contact Information -->
-                <div class="contact-info" style="margin-left: 350px;">
-                    <div class="contact-item" >
+                <div class="contact-info animate-from-right" style="margin-left: 350px;">
+                    <div class="contact-item">
                         <span class="icon">📍</span>
                         <p style="color: black;"><strong>Office</strong><br>Churerstrasse 160A, 8808 Pfäffikon SZ</p>
                     </div>
@@ -185,43 +606,125 @@
                         <p style="color: black;"><strong>Rufen Sie uns an</strong><br>+41 44 586 62 22</p>
                     </div>
                 </div>
-                <h3> Get a Quote</h3>  <!-- Added heading above the form -->
-
+                <h3 class="animate-from-right">Get a Quote</h3> <!-- Added heading above the form -->
             
                 <!-- Contact Form and Google Maps Section -->
                 <div class="contact-container">
                     <!-- Contact Form Section -->
+                    <div class="contact-form animate-from-right">
+                        <form action="submit_form.php" method="POST">
+                            <div class="form-group">
+                                <label for="name" style="color: black; font-size: 20px;">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" style="color: black; font-size: 20px;">Telefonnummer</label> <!-- Translated to German -->
+                                <input type="tel" id="phone" name="phone" required> <!-- Changed 'email' to 'phone' input type -->
+                            </div>
+                            <div class="form-group">
+                                <label for="email" style="color: black; font-size: 20px;">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" style="color: black; font-size: 20px;">Ihre Nachricht</label>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="cta-button">Nachricht senden</button>
+                        </form>
+                    </div>
+            
+                    <!-- Google Maps Location -->
+                    <div class="gmap-container" style="height: 600px; width: 500px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAPS_EMBED_URL" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe> <!-- Increased height -->
+                    </div>
+                </div>
+            
+            </section>
+            
+            <style>
+   /* Right to Left Animation */
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(100%); /* Start offscreen to the right */
+        opacity: 0; /* Start invisible */
+    }
+    100% {
+        transform: translateX(0); /* Move to original position */
+        opacity: 1; /* Fully visible */
+    }
+}
 
-                   
-<div class="contact-form">
-    <form action="submit_form.php" method="POST">
-        <div class="form-group">
-            <label for="name" style="color: black; font-size: 20px;">Name</label>
-            <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-            <label for="phone" style="color: black; font-size: 20px;">Telefonnummer</label> <!-- Translated to German -->
-            <input type="tel" id="phone" name="phone" required> <!-- Changed 'email' to 'phone' input type -->
-        </div>
-        <div class="form-group">
-            <label for="email" style="color: black; font-size: 20px;">Email</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="message" style="color: black; font-size: 20px;">Ihre Nachricht</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="cta-button">Nachricht senden</button>
-    </form>
-</div>
+/* Apply the animation to elements */
+.animate-from-right {
+    animation: slideFromRight 1.5s ease-out forwards;
+}
 
-<!-- Google Maps Location -->
- 
-<div class="gmap-container" style="height: 600px; width: 500px;">
-    <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAPS_EMBED_URL" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe> <!-- Increased height -->
-</div>
+/* Contact form and map */
+.contact-container {
+    position: relative;
+}
 
- </section>
+            </style>
+            <script>
+                
+            </script>
+ <footer class="footer">
+    <div class="footer-container">
+        <!-- Logo and Address Section -->
+        <div class="footer-left">
+            <img src="img/itlogo-removebg-preview.png" alt="Company Logo" class="footer-logo">
+            <div class="footer-address">
+                <span class="location-icon">📍</span> <!-- Location icon -->
+                Churerstrasse 160A, 8808 Pfäffikon SZ
+            </div>
+            <p class="footer-phone">📞 +41 44 586 62 22</p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-links">
+            <h4 style="color: #58a6fe;  font-size: 24px;">Quick Links</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#software">Software für Anwälte</a></li>
+                <li><a href="#it-infrastructure">IT-Infrastruktur</a></li>
+                <li><a href="#cloud-solution">Cloud Lösung</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="https://anydesk.com/en/downloads" target="_blank">Anydesk</a></li> <!-- Add Anydesk Link -->
+            </ul>
+        </div>
+
+        <!-- Social Icons Section -->
+        <div class="footer-social">
+            <h4 style=" color: #58a6fe;  font-size: 24px;">Follow Us</h4>
+            <div class="social-icons">
+                <a href="#" class="social-icon" style="color: #3b5998;"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon" style="color: #00acee;"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon" style="color:  #0077b5;"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon" style="color:#e4405f;"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Google Maps Section -->
+        <div class="footer-map">
+            <h4 style="color: #58a6fe; font-size: 24px;">Find Us Here</h4>
+            <!-- Embed Google Map -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2280.721306059951!2d8.816876216286915!3d47.20628208034063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479c7e35ab4026f1%3A0x7a21539a78e5bb5b!2sChurerstrasse%20160A%2C%208808%20Pf%C3%A4ffikon%20SZ!5e0!3m2!1sen!2sch!4v1697223039359!5m2!1sen!2sch" 
+                width="100%" 
+                height="250" 
+                style="border: 0; border-radius: 8px;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 ITST. All rights reserved.</p>
+    </div>
+</footer>
+
+
             
 
     <script src="script.js"></script>
@@ -254,78 +757,117 @@
     });
 </script>
 <style>
-    /* General styling for the section */
-#services {
-    padding: 60px 0;
-    background-color: #f4f4f4;
+
+/* General Image Hover Effect */
+.service img {
+    transition: transform 0.3s ease-in-out;
 }
 
-h2 {
-    text-align: center;
-    color: #0b4689;
-    margin-bottom: 40px;
+/* Image Zoom In on Hover */
+.service img:hover {
+    transform: scale(1.05); /* Zoom effect */
 }
 
-/* Container for the service boxes */
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding: 0 20px;
-}
-
-/* Style for each individual service box */
-.service-box {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-}
-
-.service-box img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.service-box h4 {
-    color: #000;
-    margin-top: 20px;
-}
-
-.service-box p {
-    font-size: 18px;
-    color: #555;
-    margin-top: 10px;
-}
-
+/* Button Hover Effect */
 .cta-button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
     background-color: #0b4689;
-    color: #fff;
+    color: white;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #09457a;
+    background-color: #58a6fe; /* Lighter blue on hover */
+    transform: translateY(-3px); /* Button lifts up slightly */
 }
 
-/* Responsive for smaller screens */
-@media (max-width: 768px) {
-    .services-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+/* Text Fade In */
+.service h3,
+.service p {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
-@media (max-width: 480px) {
-    .services-container {
-        grid-template-columns: 1fr;
-    }
+/* Box shadow effect on hover */
+.service:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
 }
+/* Light Border for Each Service Section */
+.service {
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Light border color */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    padding: 20px;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover Effect for Service Sections */
+.service:hover {
+    border-color: rgba(0, 0, 0, 0.3); /* Darker border color on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+/* Add Vertical Line on the Left of Each Service Section */
+.service {
+    position: relative;
+    padding: 20px;
+    border-left: 5px solid rgba(0, 0, 0, 0.1); /* Light vertical line */
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Service Sections */
+.service:hover {
+    border-left: 5px solid rgba(0, 0, 0, 0.3); /* Darker vertical line on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+/* Service Content Container */
+.content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* Each service feature (image and text) */
+.service-feature {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+}
+
+/* Vertical Line */
+.vertical-line {
+    width: 1px;
+    background-color: #ccc; /* Light color for the line */
+    height: 100%;
+    margin: 0 20px; /* Adds space around the line */
+}
+
+/* Service Image */
+.service-feature img {
+    width: 100%;
+    max-width: 400px; /* Adjust the size of the image */
+    margin-bottom: 20px;
+}
+
+/* Optional: Hover effect for the service content */
+.service-feature:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 
 </style>
+
+<script>
+    // JavaScript for fade-in on scroll (optional)
+window.addEventListener('scroll', function() {
+    const servicesSection = document.querySelector('#services');
+    const servicesTop = servicesSection.getBoundingClientRect().top;
+
+    if (servicesTop < window.innerHeight) {
+        servicesSection.classList.add('visible');
+    }
+});
+
+</script>
